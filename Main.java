@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main{
 public static void main(String[] args){
 
-Scanner hr= new Scanner(System.in);
+Scanner input= new Scanner(System.in);
 int choice;
 
 do{
@@ -16,7 +16,7 @@ System.out.println(
 +"6.EXIT");
 
 
-choice = hr.nextInt();
+choice = input.nextInt();
 
 
 switch(choice){
