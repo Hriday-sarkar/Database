@@ -25,18 +25,11 @@ System.out.println("So you want to create a Table");
 System.out.println("ENTER THE TABLE NAME:-");
 String tableName = input.next();
 System.out.println("YOUR TABLE NAME IS:-"+ tableName);
-System.out.println("How many columns you want to create:-");
-int n = input.nextInt();
-System.out.println("Enter the column names:-");
-String[] columns = new String[n];
-for(int i=0;i<n;i++){
-columns[i]=input.next();
-}
-for(int i=0;i<columns.length;i++)
-{
-System.out.print(" "+columns[i]+" \n");
-}
-TableManager.createTable();
+System.out.println("enter the comma separated column names:-");
+String columns = input.next();
+System.out.println("YOUR COLUMN NAMES ARE:-"+"["+columns+"]");
+TableManager tm = new TableManager();
+tm.createTable(tableName,columns);
 break;
 
 case 2:
