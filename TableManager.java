@@ -1,20 +1,23 @@
 public class TableManager{
+	
+FileHandler fh = new FileHandler();
 
 public void createTable(String tableName, String columns){
 System.out.println("Creating table............");
-System.out.println("File: "+tableName+".txt");
-System.out.println("Columns: "+columns);
+fh.createFile(tableName,columns);
+/*System.out.println("File: "+tableName+".txt");
+System.out.println("Columns: "+columns);*/
 }
-static void insertRecord(){
+public void insertRecord(){
 System.out.println("Inserting Record............");
 }
-static void viewRecords(){
+public void viewRecords(){
 System.out.println("Viewing Records.............");
 }
-static void searchRecord(){
+public void searchRecord(){
 System.out.println("Searching Records............");
 }
-static void deleteRecord(){
+public void deleteRecord(){
 System.out.println("Deleting Records............");
 }
 

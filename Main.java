@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class Main{
 public static void main(String[] args){
+	
+TableManager tm = new TableManager();
 
 Scanner input= new Scanner(System.in);
 int choice;
@@ -28,28 +30,29 @@ System.out.println("YOUR TABLE NAME IS:-"+ tableName);
 System.out.println("enter the comma separated column names:-");
 String columns = input.next();
 System.out.println("YOUR COLUMN NAMES ARE:-"+"["+columns+"]");
-TableManager tm = new TableManager();
+
 tm.createTable(tableName,columns);
+
 break;
 
 case 2:
 System.out.println("Insert Table selected");
-TableManager.insertRecord();
+tm.insertRecord();
 break;
 
 case 3:
 System.out.println("View record selected");
-TableManager.viewRecords();
+tm.viewRecords();
 break;
 
 case 4:
 System.out.println("Search record selected");
-TableManager.searchRecord();
+tm.searchRecord();
 break;
 
 case 5:
 System.out.println("Delete record selected");
-TableManager.deleteRecord();
+tm.deleteRecord();
 break;
 
 case 6:
